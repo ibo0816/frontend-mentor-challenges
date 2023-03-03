@@ -11,6 +11,8 @@ body {
   width: 100vw;
   height: 100vh;
   font-family: 'Outfit', sans-serif;
+  position: relative;
+  text-align: center;
 }
 
 main {
@@ -48,5 +50,21 @@ main p {
 
 main h1, main p {
   width: 265px;
-  text-align: center;
+}
+
+.attribution {
+  font-size: 11px;
+  position: absolute;
+  bottom: 1%;
+  width: 100%;
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (max-height: 540px) {
+  .attribution {
+    display: none;
+  }
 }
