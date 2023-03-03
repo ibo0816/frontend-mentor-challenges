@@ -3,6 +3,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -21,10 +22,15 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  padding-bottom: 40px;
 }
 
 main img {
-  margin: 16px 16px 0 16px;
   border-radius: 10px;
 }
 
@@ -41,7 +47,6 @@ main p {
 }
 
 main h1, main p {
-  margin-top: 16px;
-  padding: 0 28px;
+  width: 265px;
   text-align: center;
 }
