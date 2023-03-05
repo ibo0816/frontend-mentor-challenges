@@ -22,11 +22,18 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  box-shadow: 15px 15px 15px 5px hsl(221, 100%, 96%);
+}
+
+#result, #summary {
+  width: 365px;
+  height: 100%;
+  padding: 5% 0;
 }
 
 #result {
-  width: 365px;
-  height: 100%;
   position: absolute;
   left: 0;
   z-index: 10;
@@ -34,71 +41,91 @@ main {
   background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
   color: hsl(241, 100%, 89%);
   text-align: center;
-  padding: 40px 0;
-}
-
-#result h1 {
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 35px;
 }
 
 #r_circle {
-  width: 190px;
-  height: 190px;
-  border-radius: 95px;
+  width: 50%;
+  position: relative;
+  border-radius: 50%;
   margin: 0 auto;
   background: linear-gradient(hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
-  padding-top: 45px;
   font-weight: 700;
 }
 
+#r_circle::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+#r_circle p {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 #r_score {
-  font-size: 65px;
-  font-weight: 800;
+  font-size: 3.6em;
 }
 
 #r_rating {
-  margin-top: 30px;
-  margin-bottom: 20px;
-  font-size: 28px;
+  margin-top: 12%;
+  margin-bottom: 5%;
+  font-size: 1.5em;
+}
+
+#r_score, #r_rating {
+  color: hsl(0, 0%, 100%);
   font-weight: 800;
 }
 
-#r_score,#result #r_rating {
-  color: hsl(0, 0%, 100%);
-}
-
 #r_comment {
-  padding: 0 60px;
+  padding: 0 15%;
 }
 
 #summary {
-  width: 395px;
-  padding-left: 30px;
-  height: 100%;
   position: absolute;
   right: 0;
-  border-top-right-radius: 30px;
-  border-bottom-right-radius: 30px;
-
-  border: 1px solid blue;
 }
 
-.id {
-  color: hsl(0, 100%, 67%);
-  color : hsl(39, 100%, 56%);
-  color: hsl(166, 100%, 37%);
-   color: hsl(234, 85%, 45%);
+h1 {
+  font-size: 1.3em;
+  font-weight: 700;
+  margin-bottom: 10%;
+}
 
-  color: hsl(252, 100%, 67%);
-  color: hsl(241, 81%, 54%); 
-  color: hsla(256, 72%, 46%, 1);
-  color: hsla(241, 72%, 46%, 0);
-  
-  
-  color: hsl(0, 0%, 100%);
-  color: hsl(221, 100%, 96%);
-  color: hsl(241, 100%, 89%);
-  color: hsl(224, 30%, 27%);
+#summary h1, #summary ul li, #summary input {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+#summary ul {
+  list-style-position: inside;
+}
+
+#summary ul li {
+  line-height: 3em;
+  border: 1px solid red;
+  margin-bottom: 4%;
+  border-radius: 5px;
+  position: relative;
+}
+
+#summary ul li:nth-child(1) {
+  list-style-image: url(assets/images/icon-reaction.svg);
+}
+
+.s_score {
+  display: inline-block;
+  position: absolute;
+  right: 5%;
+}
+
+#summary input {
+  height: 12%;
+  margin-top: 12%;
+  display: block;
+  border-radius: 30px;
 }
