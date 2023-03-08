@@ -27,7 +27,8 @@ main {
   box-shadow: 15px 15px 15px 5px hsl(221, 100%, 96%);
 }
 
-#result, #summary {
+#result,
+#summary {
   width: 365px;
   height: 100%;
   padding: 5% 0;
@@ -48,7 +49,7 @@ main {
   position: relative;
   border-radius: 50%;
   margin: 0 auto;
-  background: linear-gradient(hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
+  background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
   font-weight: 700;
 }
 
@@ -75,7 +76,8 @@ main {
   font-size: 1.5em;
 }
 
-#r_score, #r_rating {
+#r_score,
+#r_rating {
   color: hsl(0, 0%, 100%);
   font-weight: 800;
 }
@@ -92,10 +94,16 @@ main {
 h1 {
   font-size: 1.3em;
   font-weight: 700;
-  margin-bottom: 10%;
+  margin-bottom: 8%;
 }
 
-#summary h1, #summary ul li, #summary input {
+#summary h1 {
+  color: hsl(224, 30%, 27%);
+}
+
+#summary h1,
+#summary ul li,
+#summary input {
   margin-left: auto;
   margin-right: auto;
   width: 80%;
@@ -106,21 +114,55 @@ h1 {
 }
 
 #summary ul li {
-  line-height: 3em;
-  border: 1px solid red;
   margin-bottom: 4%;
-  border-radius: 5px;
+  border-radius: 10px;
   position: relative;
+  padding: 5% 4% 4% 4%;
 }
 
 #summary ul li:nth-child(1) {
   list-style-image: url(assets/images/icon-reaction.svg);
+  color: hsl(0, 100%, 67%);
+  background-color: hsla(0, 100%, 67%, 5%);
+}
+
+#summary ul li:nth-child(2) {
+  list-style-image: url(assets/images/icon-memory.svg);
+  color: hsl(39, 100%, 56%);
+  background-color: hsla(39, 100%, 56%, 5%);
+}
+
+#summary ul li:nth-child(3) {
+  list-style-image: url(assets/images/icon-verbal.svg);
+  color: hsl(166, 100%, 37%);
+  background-color: hsla(166, 100%, 37%, 5%);
+}
+
+#summary ul li:nth-child(4) {
+  list-style-image: url(assets/images/icon-visual.svg);
+  color: hsl(234, 85%, 45%);
+  background-color: hsla(234, 85%, 45%, 5%);
+}
+
+.s_text {
+  display: inline-block;
+  position: absolute;
+  top: 28%;
+  left: 15%;
 }
 
 .s_score {
   display: inline-block;
   position: absolute;
+  top: 28%;
   right: 5%;
+  color: hsl(224, 30%, 27%);
+  font-weight: 700;
+}
+
+.gray {
+  color: gray;
+  font-weight: 700;
 }
 
 #summary input {
@@ -128,4 +170,22 @@ h1 {
   margin-top: 12%;
   display: block;
   border-radius: 30px;
+  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  color: white;
+  border: none;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+footer {
+  font-size: 11px;
+  position: absolute;
+  bottom: 1%;
+  width: 100%;
+  text-align: center;
+}
+
+footer a {
+  font-size: 11px;
+  color: hsl(228, 45%, 44%);
 }
