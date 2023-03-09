@@ -25,19 +25,17 @@ main {
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
   box-shadow: 15px 15px 15px 5px hsl(221, 100%, 96%);
+  display: flex;
 }
 
-#result,
-#summary {
+#result, #summary {
   width: 365px;
   height: 100%;
   padding: 5% 0;
+  
 }
 
 #result {
-  position: absolute;
-  left: 0;
-  z-index: 10;
   border-radius: 30px;
   background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
   color: hsl(241, 100%, 89%);
@@ -86,11 +84,6 @@ main {
   padding: 0 15%;
 }
 
-#summary {
-  position: absolute;
-  right: 0;
-}
-
 h1 {
   font-size: 1.3em;
   font-weight: 700;
@@ -101,9 +94,7 @@ h1 {
   color: hsl(224, 30%, 27%);
 }
 
-#summary h1,
-#summary ul li,
-#summary input {
+#summary h1, #summary ul li, #summary input {
   margin-left: auto;
   margin-right: auto;
   width: 80%;
@@ -144,17 +135,17 @@ h1 {
   background-color: hsla(234, 85%, 45%, 5%);
 }
 
-.s_text {
+.s_text, .s_score {
   display: inline-block;
   position: absolute;
   top: 28%;
+}
+
+.s_text {
   left: 15%;
 }
 
 .s_score {
-  display: inline-block;
-  position: absolute;
-  top: 28%;
   right: 5%;
   color: hsl(224, 30%, 27%);
   font-weight: 700;
@@ -170,11 +161,15 @@ h1 {
   margin-top: 12%;
   display: block;
   border-radius: 30px;
-  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  background-color: hsl(224, 30%, 27%);
   color: white;
   border: none;
   font-weight: 700;
   letter-spacing: 0.05em;
+}
+
+#summary input:active {
+  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
 }
 
 footer {
@@ -188,4 +183,78 @@ footer {
 footer a {
   font-size: 11px;
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-height: 540px) {
+  footer {
+    display: none;
+  }
+}
+
+
+@media screen and (max-height: 510px) {
+  main {
+    position: static;
+    margin: 0 auto;
+    transform: none;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  * {
+    font-size: 15px;
+  }
+
+  main {
+    width: 375px;
+    height: 809px;
+    position: static;
+    margin: 0 auto;
+    transform: none;
+    flex-direction: column;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  #result {
+    width: 375px;
+    height: 355px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+
+  #r_circle {
+    width: 38%;
+  }
+
+  
+  #r_rating {
+    margin-top: 5%;
+    margin-bottom: 3%;
+  }
+
+  #r_comment {
+    padding: 0 17%;
+  }
+
+  #summary {
+    width: 375px;
+    height: 454px;
+  }
+
+  #summary h1, #summary ul li, #summary input {
+    width: 85%;
+  }
+
+  #summary ul li {
+    padding: 4%;
+  }
+
+  #summary input {
+    margin-top: 8%;
+  } 
+
+  footer {
+    display: none;
+  }
 }
