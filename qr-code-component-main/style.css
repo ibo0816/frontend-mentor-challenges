@@ -52,19 +52,25 @@ main h1, main p {
   width: 265px;
 }
 
-.attribution {
+footer {
   font-size: 11px;
   position: absolute;
   bottom: 1%;
   width: 100%;
 }
 
-.attribution a { 
+footer a { 
   color: hsl(228, 45%, 44%); 
 }
 
 @media screen and (max-height: 540px) {
-  .attribution {
+  footer {
     display: none;
+  }
+
+  main {
+    position: static;
+    margin: 0 auto;
+    transform: none;
   }
 }
