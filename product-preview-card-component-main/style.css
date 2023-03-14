@@ -4,23 +4,23 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 14px;
+  font-size: 1vw;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
 }
 
 body {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background-color: hsl(30, 38%, 92%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 main {
   width: 41.66%;
   position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 main::after {
@@ -73,7 +73,7 @@ section h2, #price {
 
 #price {
   color: hsl(158, 36%, 37%);
-  position: relative;
+
 }
 
 #price::after {
@@ -82,9 +82,9 @@ section h2, #price {
   color: hsl(228, 12%, 48%);
   font-size: 0.4em;
   text-decoration: line-through;
-  position: absolute;
-  top: 0;
-  right: 20%;
+  position: relative;
+  left: 10%;
+  top: -20%;
 }
 
 button {
@@ -102,8 +102,64 @@ button:active {
 
 button::before {
   content: url("images/icon-cart.svg");
-  margin-right: 5%;
+  position: relative;
+  left: -5%;
+  top: 5%;
 }
 
-footer { font-size: 11px; text-align: center; }
-footer a { color: hsl(228, 45%, 44%); }
+footer { 
+  width: 100%;
+  font-size: 11px;
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+}
+
+footer a { 
+  font-size: 11px;
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 768px) {
+  * {
+    font-size: 15.5px;
+  }
+
+  main {
+    width: 340px;
+    height: 610px;
+  }
+
+  img, section {
+    width: 100%;
+  }
+
+  img {
+    top: 0;
+    content: url(images/image-product-mobile.jpg);
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 10px;
+  }
+
+  section {
+    bottom: 0;
+    height: 370px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0;
+    padding: 7%;
+  }
+
+  button {
+    height: 13%;
+  }
+
+  footer {
+    display: none;
+  }
+}
+
+@media screen and ((max-height: 450px) or ((min-width: 1440px) and (max-height: 800px))){
+  footer {
+    display: none;
+  }
+}
