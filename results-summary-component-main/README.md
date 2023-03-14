@@ -6,4 +6,4 @@
 ### Mobile (375x667)  
 ![](./mobile-screenshot.png)
 
-Live Site URL: https://product-preview-810b36.netlify.app/
+Live Site URL: https://results-summary-cb3432.netlify.app/
