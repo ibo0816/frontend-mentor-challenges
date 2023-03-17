@@ -5,45 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" type="text/css" href="style.css">
   <title>Frontend Mentor | Interactive rating component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-
-  <!-- Rating state start -->
-
-  How did we do?
-
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
-
-  1 2 3 4 5
-
-  Submit
-
-  <!-- Rating state end -->
-
-  <!-- Thank you state start -->
-
-  You selected <!-- Add rating here --> out of 5
-
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
-
-  <!-- Thank you state end -->
-
-  
-  <div class="attribution">
+  <main>
+    <section id="rating">
+      <div class="circle"><img src="images/icon-star.svg" alt=""></div>
+      <h1>How did we do?</h1>
+      <p>Please let us know how we did with your support request. All feedback is appreciated 
+        to help us improve our offering!</p>
+      <form action="#" method="get">
+        <div class="radio_btn">
+          <input type="radio" name="rate" id="num1" value="1"><div class="circle"><label for="num1">1</label></div>
+          <input type="radio" name="rate" id="num2" value="2"><div class="circle"><label for="num2">2</label></div>
+          <input type="radio" name="rate" id="num3" value="3"><div class="circle"><label for="num3">3</label></div>
+          <input type="radio" name="rate" id="num4" value="4"><div class="circle"><label for="num4">4</label></div>
+          <input type="radio" name="rate" id="num5" value="5"><div class="circle"><label for="num5">5</label></div>
+        </div>
+        <input type="submit" value="Submit">
+      </form>
+    </section>
+    <section id="thank">
+      <img src="images/illustration-thank-you.svg" alt="">
+      <p>You selected <span id="u_input"></span> out of 5</p>
+      <h1>Thank you!</h1>
+      <p>We appreciate you taking the time to give a rating. If you ever need more support, 
+        don’t hesitate to get in touch!</p>
+    </section>
+  </main>
+  <footer>
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    Coded by <a href="https://github.com/ibo0816/frontend-mentor-challenges/tree/main/interactive-rating-component-main">ibo0816</a>.
+  </footer>
 </body>
 </html>
