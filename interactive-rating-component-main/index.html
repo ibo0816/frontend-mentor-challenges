@@ -6,6 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="script.js"></script>
   <title>Frontend Mentor | Interactive rating component</title>
 </head>
 <body>
@@ -15,7 +16,7 @@
       <h1>How did we do?</h1>
       <p>Please let us know how we did with your support request. All feedback is appreciated 
         to help us improve our offering!</p>
-      <form action="#" method="get">
+      <form>
         <div class="radio_btn">
           <input type="radio" name="rate" id="num1" value="1"><div class="circle"><label for="num1">1</label></div>
           <input type="radio" name="rate" id="num2" value="2"><div class="circle"><label for="num2">2</label></div>
@@ -23,12 +24,12 @@
           <input type="radio" name="rate" id="num4" value="4"><div class="circle"><label for="num4">4</label></div>
           <input type="radio" name="rate" id="num5" value="5"><div class="circle"><label for="num5">5</label></div>
         </div>
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit" id="submit" onclick="changeScreen(); return false;">
       </form>
     </section>
     <section id="thank">
       <img src="images/illustration-thank-you.svg" alt="">
-      <p>You selected <span id="u_input"></span> out of 5</p>
+      <p id="result">You selected <span id="u_input"></span> out of 5</p>
       <h1>Thank you!</h1>
       <p>We appreciate you taking the time to give a rating. If you ever need more support, 
         don’t hesitate to get in touch!</p>
