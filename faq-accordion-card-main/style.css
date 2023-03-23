@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 2.67vw;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+body {
+  width: 100%;
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  width: 88%;
+  background: url('images/bg-pattern-mobile.svg') no-repeat center top white;
+  position: relative;
+  padding: 13.2em 2em 5em 2em;
+  border-radius: 1.7em;
+}
+
+section img {
+  width: 80%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -60%);
+}
+
+section h1 {
+  text-align: center;
+  font-size: 3.4rem;
+  margin-bottom: 0.5em;
+  font-weight: 700;
+  color: hsl(238, 29%, 16%);
+}
+
+section li {
+  list-style: none;
+  padding: 1.6em 0;
+  border-bottom: 1px solid  hsl(240, 5%, 91%);
+}
+
+section label {
+  display: flex;
+  justify-content: space-between;
+}
+
+section li h2 {
+  width: 90%;
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: hsl(237, 12%, 33%);
+  z-index: 30;
+}
+
+section li p {
+  width: 90%;
+  font-weight: 400;
+  font-size: 1.2rem;
+  padding-top: 1.5em;
+  color: hsl(240, 6%, 50%);
+  display: none;
+  z-index: 30;
+}
+
+.arrow {
+  content: url('images/icon-arrow-down.svg');
+  align-self: center;
+}
+
+section label:hover {
+  cursor: pointer;
+}
+
+section label:hover h2{
+  color: hsl(14, 88%, 65%);
+}
+
+input[type="checkbox"]:checked ~ p {
+  display: block;
+}
+
+input[type="checkbox"]:checked ~ label h2 {
+  font-weight: 700;
+  color: hsl(238, 29%, 16%);
+}
+
+input[type="checkbox"]:checked ~ label .arrow{
+  transform: rotate(180deg);
+}
+
+footer { font-size: 11px; text-align: center; }
+footer a { color: white; }
+
+@media all and (min-width: 768px) {
+  html {
+    font-size: 0.69vw;
+  }
+
+  section {
+    width: 64%;
+    background-image: url('images/illustration-woman-online-desktop.svg'), url('images/bg-pattern-desktop.svg');
+    background-size: 50%, 85%;
+    background-position: left -8.5em bottom 7.5em, left -40em bottom -9em;
+    padding: 6.6em 9.5em 8.2em 47.3em;
+  }
+  
+  section img {
+    content: url('images/illustration-box-desktop.svg');
+    width: 19%;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    transform: translate(-49%,-74%);
+  }
+
+  section h1 {
+    text-align: left;
+  }
+  
+}
