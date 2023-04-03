@@ -83,8 +83,12 @@ nav ul {
 nav ul li {
   font-size: 1.7rem;
   font-weight: 400;
-  padding-bottom: 1.45em;
-  padding-left: 1.2em;
+  margin-bottom: 1.45em;
+  margin-left: 1.2em;
+}
+
+nav ul li:hover {
+  cursor: pointer;
 }
 
 main {
@@ -113,7 +117,6 @@ main {
   font-size: 1.45rem;
   font-weight: 400;
   line-height: 1.6em;
-  margin-bottom: 1.6em;
   color: hsl(236, 13%, 42%);
 }
 
@@ -127,6 +130,7 @@ main {
   font-weight: 700;
   letter-spacing: 0.21em;
   padding: 1.0em 0;
+  margin-top: 1.6em;
   margin-bottom: 3.2em;
 }
 
@@ -228,4 +232,127 @@ main {
   font-size: 1.4rem;
   color: hsl(236, 13%, 42%);
   line-height: 1.8em;
+}
+
+@media screen and (min-width: 1024px){
+  html {
+    font-size: 0.694vw;
+  }
+
+  #container {
+    width: 77%;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  header {
+    width: 100%;
+    padding-top: 9.0em;
+    padding-bottom: 5.5em;
+  }
+
+  header a {
+    width: 6%;
+  }
+
+  header #menu_btn, nav img {
+    display: none;
+  }
+
+  nav {
+    width: auto;
+    min-width: none;
+    height: auto;
+    transition: none;
+    display: block;
+    position: absolute;
+    top: 10.0em;
+    right: 0;
+    opacity: 1;
+  }
+
+  nav ul {
+    padding-top: 0;
+    display: flex;
+  }
+
+  nav ul li {
+    padding-bottom: 0;
+    padding-left: 1.5em;
+    color: hsl(236, 13%, 42%);
+  }
+
+  nav ul li:hover {
+    color: hsl(5, 85%, 63%);
+  }
+
+  main {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  #main_article {
+    width: 65.76%;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  #main_article img{
+    content: url('assets/images/image-web-3-desktop.jpg');
+  }
+
+  #main_article h1 {
+    font-size: 5.5rem;
+    line-height: 0.95em;
+    margin-bottom: 0;
+    width: 46.4%;
+  }
+
+  #main_article p {
+    width: 47.5%;
+    font-size: 1.5rem;
+    margin-top: 2.5em;
+    line-height: 1.5em;
+    margin-bottom: 0;
+  }
+
+  #main_article button {
+    margin-bottom: 0;
+  }
+
+  #new {
+    width: 31.53%;
+  }
+
+  #new ul li p {
+    font-size: 1.55rem;
+  }
+
+  #ranking {
+    margin-top: 7.0em;
+    margin-bottom: 3.0em;
+  }
+
+  #ranking ul {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #ranking ul li {
+    width: 31.53%;
+    margin-bottom: 0;
+  }
+
+  .ranking_content p {
+    font-size: 1.5rem;
+    color: hsl(236, 13%, 42%);
+    line-height: 1.8em;
+  }
+
+  footer {
+    justify-self: center;
+    margin-bottom: 10px;
+  }
 }
