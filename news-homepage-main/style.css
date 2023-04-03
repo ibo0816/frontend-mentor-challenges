@@ -11,26 +11,34 @@ html {
   font-family: 'Inter', sans-serif;
 }
 
-body {
+#filter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(240, 100%, 5%, 0.301);
+  z-index: 10;
+  display: none;
+}
+
+#container {
   min-width: 375px;
   width: 90%;
-  margin: 9.5em auto 0 auto;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: hsl(36, 100%, 99%);
+  position: relative;
 }
 
 header {
-  width: 81.9%;
-  min-width: 341px;
+  width: 91%;
   padding: 3.0em 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  top: 0;
-  background-color: hsl(36, 100%, 99%);
 }
 
 header a {
@@ -46,7 +54,37 @@ header #menu_btn {
 }
 
 nav {
-  display: none;
+  width: 68%;
+  min-width: 255px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -68%;
+  transition: right 500ms, opacity 500ms;
+  background-color: hsl(36, 100%, 99%);
+  z-index: 30;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+nav img {
+  margin-top: 3.0em;
+  margin-right: 2.5em;
+  align-self: flex-end;
+  width: 10%;
+}
+
+nav ul {
+  list-style: none;
+  padding-top: 8em;
+}
+
+nav ul li {
+  font-size: 1.7rem;
+  font-weight: 400;
+  padding-bottom: 1.45em;
+  padding-left: 1.2em;
 }
 
 main {
@@ -92,6 +130,11 @@ main {
   margin-bottom: 3.2em;
 }
 
+#main_article button:hover {
+  background-color: hsl(240, 100%, 5%);
+  cursor: pointer;
+}
+
 #new {
   width: 100%;
   background-color: hsl(240, 100%, 5%);
@@ -126,6 +169,11 @@ main {
   margin-bottom: 0.6em;
 }
 
+#new ul li h2:hover {
+  color: hsl(35, 77%, 62%);
+  cursor: pointer;
+}
+
 #new ul li p {
   font-size: 1.5rem;
   font-weight: 400;
@@ -157,22 +205,27 @@ main {
 }
 
 .ranking_content h1 {
-  font-size: 3.0rem;
+  font-size: 2.9rem;
   font-weight: 800;
   color: hsl(233, 8%, 79%);
-  margin-bottom: 0.38em;
+  margin-bottom: 0.33em;
 
 }
 
 .ranking_content h2 {
-  font-size: 1.9rem;
+  font-size: 1.8rem;
   font-weight: 800;
   color:hsl(240, 100%, 5%);
-  margin-bottom: 0.5em;
+  margin-bottom: 0.4em;
+}
+
+.ranking_content h2:hover {
+  color:hsl(5, 85%, 63%);
+  cursor: pointer;
 }
 
 .ranking_content p {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: hsl(236, 13%, 42%);
-  line-height: 2.0em;
+  line-height: 1.8em;
 }
