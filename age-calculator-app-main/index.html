@@ -5,33 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="stylesheet" type="text/css" href="style.css">
   <title>Frontend Mentor | Age calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-
-  Day
-  DD
-
-  Month
-  MM
-
-  Year
-  YYYY
-
-  -- years
-  -- months
-  -- days
-  
-  <div class="attribution">
+  <main>
+    <section id="date">
+      <form>
+        <div class="user_input">
+          <label for="user_day">Day</label>
+          <input id="user_day" type="number" maxlength="2" placeholder="DD">
+        </div>
+        <div class="user_input">
+          <label for="user_month">Month</label>
+          <input id="user_month" type="number" maxlength="2" placeholder="MM">
+        </div>
+        <div class="user_input">
+          <label for="user_year">Year</label>
+          <input id="user_year" type="number" maxlength="4" placeholder="YYYY">
+        </div>
+        <div class="circle">
+          <button type="submit">
+            <img src="assets/images/icon-arrow.svg" alt="">
+          </button>
+        </div>
+      </form>
+    </section>
+    <section id="age">
+      <p id="age_year"><span class="calculated_age">- -</span>years</p>
+      <p id="age_month"><span class="calculated_age">- -</span>months</p>
+      <p id="age_day"><span class="calculated_age">- -</span>days</p>
+    </section>
+  </main>
+  <footer>
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    Coded by <a href="https://github.com/ibo0816/frontend-mentor-challenges/tree/main/age-calculator-app-main">ibo0816</a>.
+  </footer>
 </body>
 </html>

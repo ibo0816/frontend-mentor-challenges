@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 2.6667vw;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  width: 100%;
+  background-color: hsl(0, 0%, 94%);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+main {
+  width: 93.3333%;
+  margin-top: 8.5em;
+  border-radius: 2.0em;
+  border-bottom-right-radius: 8.0em;
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+#date {
+  width: 82.857%;
+  padding-top: 5.0em;
+  border-bottom: 1.5px solid hsl(0, 0%, 86%);
+}
+
+#date form {
+  width: 100%;
+  padding-bottom: 6.0em;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user_input {
+  width: 29.655%;
+}
+
+.user_input label {
+  width: 100%;
+  margin-bottom: 0.5em;
+  display: block;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: hsl(0, 1%, 44%);
+}
+
+.user_input input {
+  width: 100%;
+  padding: 0.5em 0;
+  border-radius: 0.3em;
+  border: 1.5px solid hsl(0, 0%, 86%);
+  font-size: 2.0rem;
+  font-weight: 800;
+  text-indent: 0.5em;
+  color: hsl(0, 0%, 8%);
+}
+
+.circle {
+  width: 22.5%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.circle button {
+  width: 100%;
+  height: 0;
+  border: 0;
+  position: relative;
+}
+
+#date form button::before {
+  content: "";
+  width: 100%;
+  padding-bottom: 100%;
+  border-radius: 50%;
+  display: block;
+  background-color: hsl(259, 100%, 65%);
+}
+
+#date form button img {
+  width: 30%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 124%);
+}
+
+#age {
+  width: 82.857%;
+  margin-top: 6.5em;
+  margin-bottom: 4.0em;
+}
+
+#age p {
+  font-size: 5.0rem;
+  font-weight: 800;
+  font-style: italic;
+  color: hsl(0, 0%, 8%);
+}
+
+#age .calculated_age {
+  margin-right: 0.1em;
+  color: hsl(259, 100%, 65%);
+}
+
+footer { 
+  margin-top: 20em;
+  font-size: 1.1rem; 
+  text-align: center;
+  line-height: 3.0em;
+}
+
+footer a { 
+  color: hsl(228, 45%, 44%);
+}
