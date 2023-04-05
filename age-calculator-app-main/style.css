@@ -42,7 +42,7 @@ main {
   position: relative;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .user_input {
@@ -70,6 +70,36 @@ main {
   color: hsl(0, 0%, 8%);
 }
 
+.user_input input:hover {
+  cursor: pointer;
+}
+
+.user_input input:focus {
+  outline-color: hsl(259, 55%, 39%);
+}
+
+/* input[type='number']의 오른쪽 화살표 제거 */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.user_input .error_msg {
+  margin-top: 0.5em;
+  font-size: 0.5rem;
+  font-weight: 400;
+  font-style: italic;
+  color: hsl(0, 100%, 67%);
+  display: none;
+}
+
 .circle {
   width: 22.5%;
   position: absolute;
@@ -92,6 +122,14 @@ main {
   border-radius: 50%;
   display: block;
   background-color: hsl(259, 100%, 65%);
+}
+
+#date form button:hover::before {
+  cursor: pointer;
+}
+
+#date form button:active::before {
+  background-color: hsl(0, 0%, 8%);
 }
 
 #date form button img {

@@ -14,15 +14,18 @@
       <form>
         <div class="user_input">
           <label for="user_day">Day</label>
-          <input id="user_day" type="number" maxlength="2" placeholder="DD">
+          <input id="user_day" type="number" maxlength="2" placeholder="DD" name="day">
+          <p class="error_msg"></p>
         </div>
         <div class="user_input">
           <label for="user_month">Month</label>
-          <input id="user_month" type="number" maxlength="2" placeholder="MM">
+          <input id="user_month" type="number" maxlength="2" placeholder="MM" name="month">
+          <p class="error_msg"></p>
         </div>
         <div class="user_input">
           <label for="user_year">Year</label>
-          <input id="user_year" type="number" maxlength="4" placeholder="YYYY">
+          <input id="user_year" type="number" maxlength="4" placeholder="YYYY" name="year">
+          <p class="error_msg"></p>
         </div>
         <div class="circle">
           <button type="submit">
@@ -41,5 +44,6 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://github.com/ibo0816/frontend-mentor-challenges/tree/main/age-calculator-app-main">ibo0816</a>.
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
