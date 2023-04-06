@@ -30,14 +30,18 @@ function checkEmpty() {
   return returnValue;
 }
 
-function checkInvalid(currentYear) {
-  if(checkInvalidDayOrMonth(0, 1, 31)&&checkInvalidDayOrMonth(1, 1, 12)&&checkPastYear(currentYear)){
-    return checkInvalidDate();
+function checkValid(currentDate) {
+  let dayValidation = checkValidDayOrMonth(0, 1, 31);
+  let monthValidation = checkValidDayOrMonth(1, 1, 12);
+  let yearValidation = checkPastYear(currentDate);
+
+  if(dayValidation&&monthValidation&&yearValidation){
+    return checkValidDate();
   }
   return false;
 }
 
-function checkInvalidDayOrMonth(index, start, end) {
+function checkValidDayOrMonth(index, start, end) {
   let input = inputList[index];
   if(input.value >= start && input.value <= end)
     return true;
@@ -47,9 +51,19 @@ function checkInvalidDayOrMonth(index, start, end) {
   }
 }
 
-function checkPastYear(currentYear) {
+function checkPastYear(currentDate) {
   let year = inputList[2];
-  if(year.value <= currentYear)
+  let month = inputList[1];
+  let day = inputList[0];
+  let currentDay = currentDate.getDate();
+  let currentMonth = currentDate.getMonth() + 1;
+  let currentYear = currentDate.getFullYear();
+
+  if(year.value < currentYear)
+    return true;
+  else if (year.value == currentYear && month.value < currentMonth)
+    return true;
+  else if (year.value == currentYear && month.value == currentMonth && day.value <= currentDay)
     return true;
   else {
     showErrorMsg(year, "Must be in the past");
@@ -57,12 +71,47 @@ function checkPastYear(currentYear) {
   }
 }
 
-function checkInvalidDate() {
+function checkValidDate() {
+  let year = inputList[2].value;
+  let month = inputList[1].value;
+  let day = inputList[0].value;
+  let leapDay = 0;
 
+  if (month == 2 && year % 4 == 0)
+    leapDay++;
+
+  if(day <= days[month - 1] + leapDay)
+    return true;
+  else {
+    showErrorMsg(inputList[0], "Must be a valid date");
+    return false;
+  }
+  
 }
 
-function calculateAge() {
+function calculateAge(currentDate) {
+  let currentDay = currentDate.getDate();
+  let currentMonth = currentDate.getMonth() + 1;
+  let currentYear = currentDate.getFullYear();
+  let leapDay = 0;
+  let result = 0;
 
+  if (currentYear % 4 == 0 && currentMonth == 2)
+    leapDay++;
+
+  result = currentDay - inputList[0].value;
+  if (result < 0)
+    result += (days[currentMonth-- - 1] + leapDay);
+  outputList[2].innerText = result;
+
+  result = currentMonth - inputList[1].value;
+  if (result < 0){
+    result += 12;
+    currentYear--;
+  }
+  outputList[1].innerText = result;
+
+  outputList[0].innerText = currentYear - inputList[2].value;
 }
 
 function showErrorMsg(input, msg) {
@@ -82,11 +131,9 @@ submitBtn.addEventListener("click", function(event) {
   event.preventDefault();
   clearErrorMsg();
   if(!checkEmpty()){
-
     let currentDate = new Date();
-
-    if(!checkInvalid(currentDate.getFullYear())){
-      calculateAge();
+    if(checkValid(currentDate)){
+      calculateAge(currentDate);
     }
   }
 })
