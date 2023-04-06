@@ -96,12 +96,14 @@ function calculateAge(currentDate) {
   let leapDay = 0;
   let result = 0;
 
-  if (currentYear % 4 == 0 && currentMonth == 2)
+  if (inputList[2].value % 4 == 0 && inputList[1].value == 2)
     leapDay++;
 
   result = currentDay - inputList[0].value;
-  if (result < 0)
-    result += (days[currentMonth-- - 1] + leapDay);
+  if (result < 0){
+    result += (days[inputList[1].value - 1] + leapDay);
+    currentMonth--;
+  }
   outputList[2].innerText = result;
 
   result = currentMonth - inputList[1].value;
