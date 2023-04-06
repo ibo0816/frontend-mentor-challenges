@@ -168,3 +168,76 @@ footer {
 footer a { 
   color: hsl(228, 45%, 44%);
 }
+
+@media screen and (min-width: 1024px){
+  html {
+    font-size: 1.44vw;
+  }
+  
+  main {
+    width: 58.33%;
+    margin-top: 7.3em;
+    padding: 3.0em;
+    padding-bottom: 2.5em;
+    border-radius: 1.5em;
+    border-bottom-right-radius: 10em;
+    justify-content: flex-start;
+  }
+
+  #date {
+    width: 100%;
+    padding-top: 0;
+    padding-right: 8.7em;
+    position: relative;
+  }
+
+  #date form {
+    padding-bottom: 2.0em;
+    position: static;
+  }
+
+  .user_input label {
+    font-size: 0.8rem;
+  }
+
+  .user_input input {
+    font-size: 1.5rem;
+    text-indent: 0.8em;
+  }
+
+  .user_input .error_msg {
+    font-size: 0.65rem;
+  }
+
+  footer {
+    width: 100%;
+  }
+
+  .circle {
+    width: 13.2%;
+    left: auto;
+    right: 0;
+    transform: translateY(50%);
+  }
+
+  #date form button img {
+    width: 50%;
+    transform: translate(-50%, 55%);
+  }
+
+  #age {
+    width: 100%;
+    margin-top: 1.5em;
+    margin-bottom: 0;
+    padding-right: 8.7em;
+  }
+
+  #age p {
+    font-size: 4.5rem;
+    line-height: 1.2em;
+  }
+  
+  footer {
+    margin-top: 1em;
+  }
+}
