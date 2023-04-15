@@ -60,7 +60,6 @@ article {
   padding: 1em;
   margin: 1em 0;
   border-radius: 1em;
-  background-color: hsl(210, 60%, 98%);
   font-size: 0.9rem;
   color: hsl(219, 12%, 42%);
   display: flex;
@@ -72,7 +71,7 @@ article img:first-child {
 }
 
 article img:last-child {
-  margin-left: 1.0em;
+  margin-left: auto;
 }
 
 article img{
@@ -110,13 +109,29 @@ footer {
   font-size: 0.7rem;
 }
 
-.mark {
+article:hover, button:hover {
+  cursor: pointer;
+}
+
+button:hover, .post:hover, .user_name:hover {
+  color: hsl(219, 85%, 26%);
+}
+
+.message:hover {
+  background-color: hsl(211, 68%, 94%);
+}
+
+.unread {
+  background-color: hsl(210, 60%, 98%);
+}
+
+.unread .mark{
   width: 0.5em;
   margin-left: 0.3em;
   display: inline-block;
 }
 
-.mark::after {
+.unread .mark::after {
   content: "";
   width: 100%;
   padding-bottom: 100%;
@@ -125,16 +140,28 @@ footer {
   background-color: hsl(1, 90%, 64%);
 }
 
-button:hover, .post:hover, .user_name:hover, .club:hover {
-  color: hsl(219, 85%, 26%);
-  cursor: pointer;
-}
+@media all and (min-width: 1024px) {
+  html {
+    font-size: 1.1111vw;
+    background-color: hsl(210, 60%, 98%);
+  }
 
-.message:hover {
-  background-color: hsl(211, 68%, 94%);
-  cursor: pointer;
-}
+  body {
+    width: 50.6944%;
+    margin: 4em auto;
+    border-radius: 1em;
+    background-color: hsl(0, 0%, 100%);
+  }
 
-article img:last-child:hover {
-  cursor: pointer;
+  button {
+    font-size: 0.9rem;
+  }
+
+  article {
+    font-size: 1rem;
+  }
+
+  article img {
+    width: 7%;
+  }
 }
