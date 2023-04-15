@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 4.266667vw;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+  width: 100%;
+  min-width: 375px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  width: 89.8666%;
+  margin-top: 1.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+#title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: hsl(224, 21%, 14%);
+  display: flex;
+  align-items: flex-end;
+}
+
+#unread_num {
+  padding: 0.15em 0.65em;
+  margin-left: 0.5em;
+  border-radius: 0.3em;
+  background-color: hsl(219, 85%, 26%);
+  font-size: 1.05rem;
+  color: hsl(0, 0%, 100%);
+}
+
+button {
+  font-size: 0.8rem;
+  border: none;
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(219, 12%, 42%);
+}
+
+main {
+  width: 89.8666%;
+}
+
+article {
+  width: 100%;
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 1em;
+  background-color: hsl(210, 60%, 98%);
+  font-size: 0.9rem;
+  color: hsl(219, 12%, 42%);
+  display: flex;
+  align-items: flex-start;
+}
+
+article img:first-child {
+  margin-right: 1.0em;
+}
+
+article img:last-child {
+  margin-left: 1.0em;
+}
+
+article img{
+  width: 11.5717%;
+}
+
+.user_name {
+  font-weight: 800;
+  color: hsl(224, 21%, 14%);
+}
+
+.post {
+  font-weight: 800;
+}
+
+.passed_time {
+  color: hsl(219, 14%, 63%);
+}
+
+.club {
+  font-weight: 800;
+  color: hsl(219, 85%, 26%);
+}
+
+.message {
+  margin-top: 1em;
+  padding: 1em;
+  border: 1px solid hsl(205, 33%, 90%);
+  border-radius: 1px;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  font-size: 0.7rem;
+}
+
+.mark {
+  width: 0.5em;
+  margin-left: 0.3em;
+  display: inline-block;
+}
+
+.mark::after {
+  content: "";
+  width: 100%;
+  padding-bottom: 100%;
+  border-radius: 50%;
+  display: block;
+  background-color: hsl(1, 90%, 64%);
+}
+
+button:hover, .post:hover, .user_name:hover, .club:hover {
+  color: hsl(219, 85%, 26%);
+  cursor: pointer;
+}
+
+.message:hover {
+  background-color: hsl(211, 68%, 94%);
+  cursor: pointer;
+}
+
+article img:last-child:hover {
+  cursor: pointer;
+}
