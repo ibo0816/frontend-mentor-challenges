@@ -72,6 +72,8 @@ article img:first-child {
 
 article img:last-child {
   margin-left: auto;
+  padding-left: 1.0em;
+  box-sizing: content-box;
 }
 
 article img{
