@@ -5,47 +5,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" type="text/css" href="style.css">
   <title>Frontend Mentor | Interactive card details form</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+  <main>
+    <div id="card">
+      <div id="card_front">
+        <img src="images/card-logo.svg" alt="card logo">
+        <p id="card_num">0000 0000 0000 0000</p>
+        <div>
+          <p id="cardholder_name">Jane Appleseed</p>
+          <p id="date">
+            <span id="month">00</span>/<span id="year">00</span>
+          </p>
+        </div>
+      </div>
+      <div id="card_back">
+        <p id="cvc">000</p>
+      </div>
+    </div>
+    <div id="content">
+      <div id="input">
+        <form>
+          <label for="input_name">Cardholder Name</label>
+          <div>
+            <input type="text" id="input_name" placeholder="e.g. Jane Appleseed">
+            <p class="error_msg"></p>
+          </div>
 
-  0000 0000 0000 0000
-  Jane Appleseed
-  00/00
+          <label for="input_num">Card Number</label>
+          <div>
+            <input type="text" id="input_num" maxlength="19" placeholder="e.g. 1234 5678 9123 0000">
+            <p class="error_msg"></p>
+          </div>
 
-  000
+          <label class="half">Exp. Date (MM/YY)</label>
+          <label for="input_cvc" class="half">CVC</label>
+          <div id="last_line_input">
+            <input type="text" id="input_month" maxlength="2" placeholder="MM">
+            <input type="text" id="input_year" maxlength="2" placeholder="YY">
+            <input type="text" id="input_cvc" maxlength="3" placeholder="e.g. 123">
+            <p class="error_msg half"></p>
+            <p class="error_msg half"></p>
+          </div>
 
-  Cardholder Name
-  e.g. Jane Appleseed
-
-  Card Number
-  e.g. 1234 5678 9123 0000
-
-  Exp. Date (MM/YY)
-  MM
-  YY
-
-  CVC
-  e.g. 123
-
-  Confirm
-
-  <!-- Completed state start -->
-
-  Thank you!
-  We've added your card details
-  Continue
-  
-  <div class="attribution">
+          <button type="submit" onclick="return false;">Confirm</button>
+        </form>
+      </div>
+      <div id="completed">
+        <img src="images/icon-complete.svg" alt="">
+        <h1>Thank you!</h1>
+        <p>We've added your card details</p>
+        <button type="button">Continue</button>
+      </div>
+    </div>
+  </main>
+  <footer>
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    Coded by <a href="https://github.com/ibo0816/frontend-mentor-challenges/tree/main/interactive-card-details-form-main">ibo0816</a>.
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
