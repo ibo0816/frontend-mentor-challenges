@@ -122,7 +122,7 @@ input:hover {
 }
 
 input:focus {
-  border: 1.3px solid transparent;
+  border: 1.3px solid transparent !important;
   background: linear-gradient(#fff, #fff) padding-box,
   linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%)) border-box;
   outline: none;
@@ -194,4 +194,79 @@ footer {
   width: 100%;
   font-size: 0.7rem;
   text-align: center;
+}
+
+@media screen and (min-width: 768px){
+  html {
+    font-size: 1.25vw;
+  }
+
+  main {
+    display: flex;
+  }
+
+  #card {
+    width: 33.3%;
+    height: auto;
+    background-image: url('images/bg-main-desktop.png');
+  }
+
+  #card_front {
+    width: 92.6%;
+    padding: 1.65rem;
+    bottom: auto;
+    top: 0;
+    right: 0;
+    transform: translate(30%, 40%);
+  }
+
+  #card_front img {
+    width: 22%;
+  }
+
+  #card_num {
+    margin-top: 1.9em;
+    margin-bottom: 0.9em;
+    font-size: 1.5rem;
+  }
+
+  #card_front div {
+    font-size: 0.8rem;
+  }
+
+  #card_back {
+    width: 92.6%;
+    padding: 6.2rem 2.7rem;
+    bottom: 0;
+    transform: translate(50%, -40%);
+  }
+
+  #cvc {
+    font-size: 0.8rem;
+  }
+
+  #content {
+    width: 66.6%;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #input, #completed {
+    width: 40%;
+    transform: translate(15%, 0);
+  }
+
+}
+
+@media screen and (min-width: 1440px){
+  #card_front {
+    transform: translate(30%, 75%);
+  }
+
+  #card_back {
+    transform: translate(50%, -75%);
+  }
 }
