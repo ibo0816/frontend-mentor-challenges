@@ -215,9 +215,9 @@ footer {
     width: 92.6%;
     padding: 1.65rem;
     bottom: auto;
-    top: 0;
+    top: 50%;
     right: 0;
-    transform: translate(30%, 40%);
+    transform: translate(30%, -110%);
   }
 
   #card_front img {
@@ -237,8 +237,8 @@ footer {
   #card_back {
     width: 92.6%;
     padding: 6.2rem 2.7rem;
-    bottom: 0;
-    transform: translate(50%, -40%);
+    bottom: 50%;
+    transform: translate(50%, 110%);
   }
 
   #cvc {
@@ -256,17 +256,6 @@ footer {
 
   #input, #completed {
     width: 40%;
-    transform: translate(15%, 0);
-  }
-
-}
-
-@media screen and (min-width: 1440px){
-  #card_front {
-    transform: translate(30%, 75%);
-  }
-
-  #card_back {
-    transform: translate(50%, -75%);
+    transform: translateX(15%);
   }
 }
