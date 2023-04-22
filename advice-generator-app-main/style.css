@@ -80,6 +80,14 @@ button > img {
   transform: translate(-50%, 55%);
 }
 
+button:hover{
+  cursor: pointer;
+}
+
+button:hover::before {
+  box-shadow: 0 0 30px 3px hsl(150, 100%, 66%);
+}
+
 footer {
   font-size: 0.4rem;
   color: hsl(193, 38%, 86%);
