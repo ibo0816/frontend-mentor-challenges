@@ -36,8 +36,8 @@ let cardInfo = [
   }
 ];
 
-let confirmBtn = document.querySelector("#input button");
 let form = document.querySelector("#input");
+let confirmBtn = document.querySelector("#input button");
 let completed = document.querySelector("#completed");
 let continueBtn = document.querySelector("#completed button");
 
@@ -51,25 +51,28 @@ function showInput(node) {
 
 function checkCardNum(input) {
   let str = input.value;
-  if (str.length % 5 == 0 && str.length != 0){
-    if(str[str.length - 1] == " "){
-      str = str.slice(0, str.length - 1);
-    }
-    else {
-      str = str.slice(0, str.length - 1) + " " + str.slice(str.length - 1);
-    }
+  let position = input.selectionStart; 
+
+  for (let i = 0; i < str.length; i++){
+    if (str[i] != " ")
+      continue;
+    str = str.slice(0, i) + str.slice(i + 1);
+  }
+
+  for (let i = 4; i < str.length && i < 19; i += 5) {
+    str = str.slice(0, i) + " " + str.slice(i);
+  }
+  if(str[position - 1] == " " && input.value.length < str.length){
+    position++;
   }
   input.value = str;
+  input.setSelectionRange(position, position);
 }
 
 cardInfo.forEach(function(node, index){
-  if (index == 1)
     node.input.addEventListener("input", function() {
-      checkCardNum(this);
-      showInput(node);
-    });
-  else
-    node.input.addEventListener("input", function() {
+      if (index == 1)
+        checkCardNum(this);
       showInput(node);
     });
 });
@@ -107,12 +110,19 @@ function checkLength(node, index) {
   return true;
 }
 
+function isNumber(str) {
+  for (let i = 0; i < str.length; i++)
+    if (str[i] > '9' || str[i] < 0)
+      return false;
+  return true;
+}
+
 function checkOnlyNumber(node, index) {
   let input = node.input.value;
   if (index == 1)
     input = input.slice(0, 4) + input.slice(5, 9) + input.slice(10, 14) + input.slice(16);
 
-  if(isNaN(input)){
+  if(!isNumber(input)){
     showErrorMsg(node, "Wrong format, numbers only");
     node.valid = false;
     return false;
